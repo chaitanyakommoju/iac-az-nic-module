@@ -7,3 +7,6 @@ output "nic_private_ip" {
   description = "Private IP address assigned to the NIC"
   value       = azurerm_network_interface.this.private_ip_address
 }
+output "id" {
+  value = azurerm_network_interface.this.id
+}
