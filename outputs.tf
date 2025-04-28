@@ -13,3 +13,16 @@ output "id" {
 output "vm_private_ip" {
   value = azurerm_network_interface.this.private_ip_address
 }
+output "nic_name" {
+  description = "Name of the NIC"
+  value       = azurerm_network_interface.this.name
+}
+output "private_ip_address" {
+  description = "Private IP Address of the NIC"
+  value       = azurerm_network_interface.this.private_ip_address
+}
+
+output "public_ip_address" {
+  description = "Public IP Address if associated"
+  value       = azurerm_network_interface.this.ip_configuration[0].public_ip_address_id
+}
