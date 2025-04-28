@@ -24,5 +24,5 @@ output "private_ip_address" {
 
 output "public_ip_address" {
   description = "Public IP Address if associated"
-  value       = azurerm_network_interface.this.ip_configuration[0].public_ip_address_id
+  value       = azurerm_public_ip.this.ip_address
 }
