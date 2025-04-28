@@ -10,3 +10,6 @@ output "nic_private_ip" {
 output "id" {
   value = azurerm_network_interface.this.id
 }
+output "vm_private_ip" {
+  value = azurerm_network_interface.this.private_ip_address
+}
